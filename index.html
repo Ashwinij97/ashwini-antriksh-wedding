@@ -1,1 +1,332 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashwini & Antriksh | Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f5f3e9;
+  color: #53644f;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+.hero {
+  min-height: 100vh;
+  padding: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(#e8eddfd9,#e8eddfd9),
+    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200');
+  background-size: cover;
+  background-position: center;
+}
+.invitation {
+  width: 100%;
+  max-width: 520px;
+  padding: 38px 22px;
+  border: 1px solid #a7b39a;
+  outline: 5px solid #e8eddf;
+  background: #fffdf6ed;
+  box-shadow: 0 10px 40px #53644f20;
+}
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(52px, 13vw, 76px);
+  font-weight: 400;
+  margin: 24px 0 8px;
+  color: #65785c;
+}
+.amp {
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-style: italic;
+}
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  margin: 25px 0;
+}
+.date {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin: 20px 0 8px;
+}
+.small {
+  font-size: 12px;
+  line-height: 1.9;
+}
+button, .map-button {
+  border: none;
+  border-radius: 30px;
+  padding: 13px 25px;
+  background: #687d60;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
+}
+section {
+  padding: 65px 20px;
+}
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 47px;
+  font-weight: 400;
+  color: #718365;
+  margin: 0 0 18px;
+}
+.divider {
+  width: 65px;
+  height: 1px;
+  background: #a7b39a;
+  margin: 20px auto;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.time {
+  background: #e6ebdf;
+  border-radius: 12px;
+  padding: 15px 12px;
+  min-width: 68px;
+}
+.time strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+.time span { font-size: 10px; }
+.events {
+  background: #e9eddf;
+}
+.event-card {
+  max-width: 440px;
+  margin: 15px auto;
+  padding: 23px;
+  background: #fffdf7;
+  border-radius: 12px;
+  border: 1px solid #d6dece;
+}
+.event-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+.event-card p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.venue {
+  background: #f0eee3;
+}
+.message {
+  max-width: 470px;
+  margin: auto;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  line-height: 1.9;
+  font-style: italic;
+}
+footer {
+  background: #687d60;
+  color: white;
+  padding: 35px 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+}
+.hidden { display: none; }
+#musicStatus { font-size: 11px; }
+</style>
+</head>
+
+<body>
+
+<!-- OPENING INVITATION -->
+<div class="hero" id="opening">
+  <div class="invitation">
+    <div class="eyebrow">Together with our families</div>
+    <p class="subtitle">We joyfully invite you to celebrate</p>
+
+    <h1>Ashwini</h1>
+    <div class="amp">&</div>
+    <h1>Antriksh</h1>
+
+    <div class="divider"></div>
+    <p class="subtitle">A beautiful beginning to forever</p>
+
+    <div class="date">09 · 12 · 2026</div>
+    <p class="small">WEDNESDAY</p>
+
+    <button onclick="openInvitation()">
+      Open Invitation ♡
+    </button>
+    <p class="small">With love, we invite you to our wedding</p>
+  </div>
+</div>
+
+<!-- MAIN INVITATION -->
+<div id="mainContent" class="hidden">
+
+<section>
+  <p class="eyebrow">Two hearts · One beautiful journey</p>
+  <h1>Ashwini & Antriksh</h1>
+  <div class="divider"></div>
+  <p class="message">
+    With the blessings of our families,
+    we are beginning a new chapter of love,
+    laughter and togetherness.
+    We would be delighted to have you with us
+    on our special day.
+  </p>
+</section>
+
+<section class="events">
+  <h2 class="section-title">Save the Date</h2>
+  <p>Our forever begins in...</p>
+
+  <div class="countdown">
+    <div class="time">
+      <strong id="days">00</strong><span>DAYS</span>
+    </div>
+    <div class="time">
+      <strong id="hours">00</strong><span>HOURS</span>
+    </div>
+    <div class="time">
+      <strong id="minutes">00</strong><span>MINUTES</span>
+    </div>
+    <div class="time">
+      <strong id="seconds">00</strong><span>SECONDS</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Our Celebrations</h2>
+  <div class="divider"></div>
+
+  <div class="event-card">
+    <h3>Mehendi</h3>
+    <p>A day of colours, beautiful traditions and happy memories.</p>
+    <p>Timing and venue details to follow</p>
+  </div>
+
+  <div class="event-card">
+    <h3>Haldi & Sangeet</h3>
+    <p>Golden moments, music, dancing and lots of laughter!</p>
+    <p>Timing and venue details to follow</p>
+  </div>
+
+  <div class="event-card">
+    <h3>The Wedding</h3>
+    <p>Wednesday, 9 December 2026</p>
+    <p>Baarat: 6:00 PM</p>
+    <p>Reception: 8:00 PM</p>
+  </div>
+</section>
+
+<section class="venue">
+  <h2 class="section-title">The Wedding Venue</h2>
+  <div class="divider"></div>
+  <h3 style="font-family:'Playfair Display',serif">
+    Monalisa Lawn
+  </h3>
+  <p>Thane, Maharashtra</p>
+  <a class="map-button"
+     href="https://www.google.com/maps/search/?api=1&query=Monalisa+Lawn+Thane+India"
+     target="_blank">
+     Find Us on Google Maps ↗
+  </a>
+</section>
+
+<section>
+  <h2 class="section-title">With Love</h2>
+  <div class="divider"></div>
+  <p class="message">
+    Your presence and blessings will make
+    our celebration even more special.
+    We cannot wait to celebrate this
+    beautiful day with you!
+  </p>
+  <h1 style="font-size:52px">Ashwini & Antriksh</h1>
+</section>
+
+<footer>
+  Forever begins here ♡
+  <p style="font:12px Poppins,sans-serif">
+    09 December 2026
+  </p>
+</footer>
+
+</div>
+
+<!-- OPTIONAL MUSIC -->
+<audio id="weddingMusic" loop>
+  <source src="wedding-song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function openInvitation() {
+  document.getElementById('opening').style.display = 'none';
+  document.getElementById('mainContent').classList.remove('hidden');
+
+  const music = document.getElementById('weddingMusic');
+  music.play().catch(() => {
+    console.log("Add your music file to enable playback.");
+  });
+}
+
+const weddingDate = new Date("2026-12-09T18:00:00+05:30").getTime();
+
+function updateCountdown() {
+  const now = Date.now();
+  const difference = weddingDate - now;
+
+  if (difference <= 0) {
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
+    return;
+  }
+
+  document.getElementById('days').textContent =
+    Math.floor(difference / 86400000);
+
+  document.getElementById('hours').textContent =
+    Math.floor((difference % 86400000) / 3600000);
+
+  document.getElementById('minutes').textContent =
+    Math.floor((difference % 3600000) / 60000);
+
+  document.getElementById('seconds').textContent =
+    Math.floor((difference % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
+
